@@ -58,7 +58,7 @@ async def update_user(id: str, data: dict):
         return False
 
 
-# Delete a student from the database
+# Delete a user from the database
 async def delete_user(id: str):
     user = await user_collection.find_one({"_id": ObjectId(id)})
     if user:
